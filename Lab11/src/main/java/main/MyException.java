@@ -1,0 +1,11 @@
+package main;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value= HttpStatus.NOT_FOUND, reason="Not found")
+public class MyException extends RuntimeException {
+    public MyException(String msg){
+        super(msg);
+    }
+}
